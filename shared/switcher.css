@@ -1,0 +1,74 @@
+.variant-switcher {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 100;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(8, 10, 16, 0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+.variant-switcher a,
+.variant-switcher button {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  color: #c9cedb;
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.variant-switcher a:hover,
+.variant-switcher button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.variant-switcher a.is-active {
+  color: #041018;
+  background: linear-gradient(135deg, #5ce1ff, #a78bfa);
+}
+
+body[data-variant="3"] .variant-switcher a.is-active {
+  color: #fff;
+  background: linear-gradient(135deg, #ff2d45, #c01028);
+}
+
+.variant-switcher .switcher-compare {
+  color: #9aa3b5;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0 999px 999px 0;
+  margin-left: 0.15rem;
+  padding-left: 0.95rem;
+}
+
+body {
+  padding-bottom: 4.5rem;
+}
+
+@media (max-width: 420px) {
+  .variant-switcher {
+    width: calc(100% - 1.5rem);
+    justify-content: space-between;
+  }
+
+  .variant-switcher a,
+  .variant-switcher button {
+    padding-inline: 0.65rem;
+    font-size: 0.75rem;
+  }
+}

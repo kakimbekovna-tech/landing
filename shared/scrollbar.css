@@ -1,0 +1,36 @@
+/* NeonShine custom scrollbar — вместо системного */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #5ce1ff #0c0e14;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5ce1ff #0c0e14;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0e14;
+  border-left: 1px solid rgba(92, 225, 255, 0.08);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #5ce1ff 0%, #8b5cff 100%);
+  border-radius: 999px;
+  border: 2px solid #0c0e14;
+  box-shadow: 0 0 12px rgba(92, 225, 255, 0.35);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7aebff 0%, #a78bfa 100%);
+  box-shadow: 0 0 16px rgba(92, 225, 255, 0.55);
+}
+
+::-webkit-scrollbar-corner {
+  background: #0c0e14;
+}

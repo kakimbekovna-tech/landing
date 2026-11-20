@@ -1,0 +1,24 @@
+/* Красный скролл только для варианта 3 */
+html,
+* {
+  scrollbar-color: #ff2d45 #12080a;
+}
+
+::-webkit-scrollbar-track {
+  background: #12080a;
+  border-left: 1px solid rgba(255, 45, 69, 0.12);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff2d45 0%, #c01028 100%);
+  box-shadow: 0 0 12px rgba(255, 45, 69, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff6b7a 0%, #ff2d45 100%);
+  box-shadow: 0 0 16px rgba(255, 45, 69, 0.55);
+}
+
+::-webkit-scrollbar-corner {
+  background: #12080a;
+}

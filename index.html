@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Сравнение вариантов лендинга NeonShine" />
+  <title>NeonShine — выбор варианта</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="chooser.css" />
+  <link rel="stylesheet" href="shared/scrollbar.css" />
+</head>
+<body>
+  <div class="chooser-bg" aria-hidden="true"></div>
+
+  <dialog class="compare-modal" id="compareModal" open>
+    <div class="modal-card">
+      <p class="modal-kicker">NeonShine</p>
+      <h1>Выберите вариант лендинга</h1>
+      <p class="modal-lead">Три варианта по ТЗ. Ниже — живое превью. На телефоне тоже удобно листать.</p>
+
+      <div class="variant-buttons" role="tablist" aria-label="Варианты">
+        <button type="button" class="variant-btn is-active" data-variant="1" role="tab" aria-selected="true">
+          <span class="vb-num">01</span>
+          <span class="vb-title">1 вариант</span>
+          <span class="vb-desc">Мягкий neon · карточки</span>
+        </button>
+        <button type="button" class="variant-btn" data-variant="2" role="tab" aria-selected="false">
+          <span class="vb-num">02</span>
+          <span class="vb-title">2 вариант</span>
+          <span class="vb-desc">Техно · список услуг</span>
+        </button>
+        <button type="button" class="variant-btn" data-variant="3" role="tab" aria-selected="false">
+          <span class="vb-num">03</span>
+          <span class="vb-title">3 вариант</span>
+          <span class="vb-desc">Racing red · студия</span>
+        </button>
+      </div>
+
+      <div class="preview-shell">
+        <div class="preview-chrome">
+          <span></span><span></span><span></span>
+          <p id="previewLabel">Превью · 1 вариант</p>
+        </div>
+        <iframe
+          id="previewFrame"
+          title="Превью лендинга"
+          src="/v1/"
+          loading="eager"
+        ></iframe>
+      </div>
+
+      <div class="modal-actions">
+        <a class="open-full" id="openFull" href="/v1/">Открыть полностью →</a>
+        <button type="button" class="close-hint" id="closeModal" hidden>Закрыть</button>
+      </div>
+    </div>
+  </dialog>
+
+  <main class="fallback" id="fallback">
+    <h2>Сравнение вариантов</h2>
+    <div class="fallback-btns">
+      <a href="/v1/">1 вариант</a>
+      <a href="/v2/">2 вариант</a>
+      <a href="/v3/">3 вариант</a>
+    </div>
+  </main>
+
+  <script src="chooser.js"></script>
+</body>
+</html>
