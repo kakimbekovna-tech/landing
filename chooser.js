@@ -11,8 +11,15 @@
     3: "/v3/",
   };
 
+  let current = "1";
+
+  function t(key, vars) {
+    return window.NS_I18N?.t?.(key, vars) ?? key;
+  }
+
   function setVariant(id) {
     const key = String(id);
+    current = key;
     const path = paths[key] || paths["1"];
 
     buttons.forEach((btn) => {
@@ -22,7 +29,7 @@
     });
 
     if (frame) frame.src = path;
-    if (label) label.textContent = `Превью · ${key} вариант`;
+    if (label) label.textContent = t("chooser.preview", { n: key });
     if (openFull) openFull.href = path;
 
     try {
@@ -42,7 +49,20 @@
   } catch (_) {
     saved = "1";
   }
-  setVariant(saved);
+
+  function boot() {
+    setVariant(saved);
+    window.NS_I18N?.onChange?.(() => {
+      if (label) label.textContent = t("chooser.preview", { n: current });
+      if (frame) frame.src = paths[current] || paths["1"];
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 
   if (modal && typeof modal.showModal === "function" && !modal.open) {
     modal.showModal();

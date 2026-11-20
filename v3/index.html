@@ -12,88 +12,91 @@
   <link rel="stylesheet" href="../shared/scrollbar.css" />
   <link rel="stylesheet" href="scrollbar-red.css" />
   <link rel="stylesheet" href="../shared/contact-modal.css" />
+  <link rel="stylesheet" href="../shared/lang.css" />
   <link rel="stylesheet" href="../shared/switcher.css" />
 </head>
 <body data-variant="3">
   <header class="bar">
     <a class="mark" href="#top">NEONSHINE</a>
-    <a class="bar-cta" data-wa="inspect" href="#">Записаться →</a>
+    <div class="bar-tools" data-lang-mount>
+      <a class="bar-cta" data-wa="inspect" data-i18n="nav.book" href="#">Записаться →</a>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="hero-stage">
-        <img src="hero-neon.jpg" alt="Спортивный автомобиль" class="hero-img" />
+        <img src="hero-neon.jpg" class="hero-img" data-i18n="hero.img" data-i18n-attr="alt" alt="Спортивный автомобиль" />
         <div class="hero-red-wash" aria-hidden="true"></div>
         <div class="hero-vignette" aria-hidden="true"></div>
       </div>
       <div class="hero-panel">
-        <p class="stamp">Астана · Studio</p>
-        <h1>Премиальный детейлинг и уход за вашим авто</h1>
-        <p class="sub">Вернем вашей машине состояние новой за 24 часа</p>
-        <a class="btn-red" data-wa="inspect" href="#">Записаться на осмотр</a>
+        <p class="stamp" data-i18n="hero.stamp">Астана · Studio</p>
+        <h1 data-i18n="hero.title">Премиальный детейлинг и уход за вашим авто</h1>
+        <p class="sub" data-i18n="hero.lead">Вернем вашей машине состояние новой за 24 часа</p>
+        <a class="btn-red" data-wa="inspect" data-i18n="hero.cta" href="#">Записаться на осмотр</a>
       </div>
     </section>
 
     <section class="wrap" id="services">
       <div class="sec-title">
-        <p class="stamp">Каталог</p>
-        <h2>Наши услуги</h2>
+        <p class="stamp" data-i18n="services.eyebrow">Каталог</p>
+        <h2 data-i18n="services.title">Наши услуги</h2>
       </div>
 
       <div class="cards">
         <article class="card">
           <div>
-            <h3>Трехфазная мойка</h3>
-            <p>Бережная очистка кузова</p>
-            <p class="cost">от 2 000 ₸</p>
+            <h3 data-i18n="svc.wash.name">Трехфазная мойка</h3>
+            <p data-i18n="svc.wash.desc">Бережная очистка кузова</p>
+            <p class="cost" data-i18n="svc.wash.price">от 2 000 ₸</p>
           </div>
-          <a class="btn-line" data-wa="service" data-service="Трехфазная мойка" data-price="от 2 000 ₸" href="#">Выбрать</a>
+          <a class="btn-line" data-wa="service" data-service-key="wash" data-i18n="services.choose" href="#">Выбрать</a>
         </article>
         <article class="card">
           <div>
-            <h3>Химчистка салона</h3>
-            <p>Удаление любых пятен и запахов</p>
-            <p class="cost">от 35 000 ₸</p>
+            <h3 data-i18n="svc.interior.name">Химчистка салона</h3>
+            <p data-i18n="svc.interior.desc">Удаление любых пятен и запахов</p>
+            <p class="cost" data-i18n="svc.interior.price">от 35 000 ₸</p>
           </div>
-          <a class="btn-line" data-wa="service" data-service="Химчистка салона" data-price="от 35 000 ₸" href="#">Выбрать</a>
+          <a class="btn-line" data-wa="service" data-service-key="interior" data-i18n="services.choose" href="#">Выбрать</a>
         </article>
         <article class="card">
           <div>
-            <h3>Полировка кузова</h3>
-            <p>Устранение царапин и голограмм</p>
-            <p class="cost">от 60 000 ₸</p>
+            <h3 data-i18n="svc.polish.name">Полировка кузова</h3>
+            <p data-i18n="svc.polish.desc">Устранение царапин и голограмм</p>
+            <p class="cost" data-i18n="svc.polish.price">от 60 000 ₸</p>
           </div>
-          <a class="btn-line" data-wa="service" data-service="Полировка кузова" data-price="от 60 000 ₸" href="#">Выбрать</a>
+          <a class="btn-line" data-wa="service" data-service-key="polish" data-i18n="services.choose" href="#">Выбрать</a>
         </article>
         <article class="card">
           <div>
-            <h3>Керамическое покрытие</h3>
-            <p>Защита кузова на 2 года</p>
-            <p class="cost">от 120 000 ₸</p>
+            <h3 data-i18n="svc.ceramic.name">Керамическое покрытие</h3>
+            <p data-i18n="svc.ceramic.desc">Защита кузова на 2 года</p>
+            <p class="cost" data-i18n="svc.ceramic.price">от 120 000 ₸</p>
           </div>
-          <a class="btn-line" data-wa="service" data-service="Керамическое покрытие" data-price="от 120 000 ₸" href="#">Выбрать</a>
+          <a class="btn-line" data-wa="service" data-service-key="ceramic" data-i18n="services.choose" href="#">Выбрать</a>
         </article>
       </div>
     </section>
 
     <section class="wrap why" id="why">
       <div class="sec-title">
-        <p class="stamp">Доверие</p>
-        <h2>Почему мы</h2>
+        <p class="stamp" data-i18n="why.eyebrow">Доверие</p>
+        <h2 data-i18n="why.title">Почему мы</h2>
       </div>
       <ul class="pros">
         <li>
           <span>01</span>
-          <p>Используем только немецкую и американскую автохимию.</p>
+          <p data-i18n="why.1">Используем только немецкую и американскую автохимию.</p>
         </li>
         <li>
           <span>02</span>
-          <p>Опыт мастеров от 5 лет.</p>
+          <p data-i18n="why.2">Опыт мастеров от 5 лет.</p>
         </li>
         <li>
           <span>03</span>
-          <p>Камеры в рабочей зоне — можете следить за своим авто онлайн.</p>
+          <p data-i18n="why.3">Камеры в рабочей зоне — можете следить за своим авто онлайн.</p>
         </li>
       </ul>
     </section>
@@ -103,12 +106,12 @@
     <div class="foot-wrap">
       <div>
         <p class="mark foot-mark">NEONSHINE</p>
-        <p class="muted">Премиальный уход за автомобилями</p>
+        <p class="muted" data-i18n="footer.tag">Премиальный уход за автомобилями</p>
       </div>
       <ul class="meta">
-        <li><em>Адрес</em> г. Астана</li>
-        <li><em>Режим</em> Ежедневно 10:00–22:00</li>
-        <li><em>Телефон</em> <a class="phone" data-phone-link href="tel:+77001234567">+7 (700) 123-45-67</a></li>
+        <li><em data-i18n="footer.address">Адрес</em> <span data-i18n="footer.city">г. Астана</span></li>
+        <li><em data-i18n="footer.hoursLabelShort">Режим</em> <span data-i18n="footer.hoursShort">Ежедневно 10:00–22:00</span></li>
+        <li><em data-i18n="footer.phone">Телефон</em> <a class="phone" data-phone-link href="tel:+77001234567">+7 (700) 123-45-67</a></li>
       </ul>
       <div class="foot-cta">
         <a class="ig" data-instagram href="https://instagram.com/neonshine.astana" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -119,13 +122,14 @@
           </svg>
           Instagram
         </a>
-        <a class="btn-red sm" data-wa="inspect" href="#">Записаться на осмотр</a>
+        <a class="btn-red sm" data-wa="inspect" data-i18n="hero.cta" href="#">Записаться на осмотр</a>
       </div>
     </div>
     <p class="copy">© <span data-year></span> NeonShine</p>
   </footer>
 
   <script src="../shared/config.js"></script>
+  <script src="../shared/i18n.js"></script>
   <script src="../shared/main.js"></script>
   <script src="../shared/switcher.js"></script>
 </body>

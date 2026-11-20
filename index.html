@@ -10,63 +10,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="chooser.css" />
   <link rel="stylesheet" href="shared/scrollbar.css" />
+  <link rel="stylesheet" href="shared/lang.css" />
 </head>
-<body>
+<body data-chooser>
   <div class="chooser-bg" aria-hidden="true"></div>
+  <div class="chooser-lang" data-lang-mount></div>
 
   <dialog class="compare-modal" id="compareModal" open>
     <div class="modal-card">
       <p class="modal-kicker">NeonShine</p>
-      <h1>Выберите вариант лендинга</h1>
-      <p class="modal-lead">Три варианта по ТЗ. Ниже — живое превью. На телефоне тоже удобно листать.</p>
+      <h1 data-i18n="chooser.title">Выберите вариант лендинга</h1>
+      <p class="modal-lead" data-i18n="chooser.lead">Три варианта по ТЗ. Ниже — живое превью. На телефоне тоже удобно листать.</p>
 
-      <div class="variant-buttons" role="tablist" aria-label="Варианты">
+      <div class="variant-buttons" role="tablist" aria-label="Variants">
         <button type="button" class="variant-btn is-active" data-variant="1" role="tab" aria-selected="true">
           <span class="vb-num">01</span>
-          <span class="vb-title">1 вариант</span>
-          <span class="vb-desc">Мягкий neon · карточки</span>
+          <span class="vb-title" data-i18n="chooser.v1">1 вариант</span>
+          <span class="vb-desc" data-i18n="chooser.v1desc">Мягкий neon · карточки</span>
         </button>
         <button type="button" class="variant-btn" data-variant="2" role="tab" aria-selected="false">
           <span class="vb-num">02</span>
-          <span class="vb-title">2 вариант</span>
-          <span class="vb-desc">Техно · список услуг</span>
+          <span class="vb-title" data-i18n="chooser.v2">2 вариант</span>
+          <span class="vb-desc" data-i18n="chooser.v2desc">Техно · список услуг</span>
         </button>
         <button type="button" class="variant-btn" data-variant="3" role="tab" aria-selected="false">
           <span class="vb-num">03</span>
-          <span class="vb-title">3 вариант</span>
-          <span class="vb-desc">Racing red · студия</span>
+          <span class="vb-title" data-i18n="chooser.v3">3 вариант</span>
+          <span class="vb-desc" data-i18n="chooser.v3desc">Racing red · студия</span>
         </button>
       </div>
 
       <div class="preview-shell">
         <div class="preview-chrome">
           <span></span><span></span><span></span>
-          <p id="previewLabel">Превью · 1 вариант</p>
+          <p id="previewLabel" data-i18n-preview>Превью · 1 вариант</p>
         </div>
         <iframe
           id="previewFrame"
-          title="Превью лендинга"
+          title="Preview"
           src="/v1/"
           loading="eager"
         ></iframe>
       </div>
 
       <div class="modal-actions">
-        <a class="open-full" id="openFull" href="/v1/">Открыть полностью →</a>
-        <button type="button" class="close-hint" id="closeModal" hidden>Закрыть</button>
+        <a class="open-full" id="openFull" data-i18n="chooser.open" href="/v1/">Открыть полностью →</a>
       </div>
     </div>
   </dialog>
 
   <main class="fallback" id="fallback">
-    <h2>Сравнение вариантов</h2>
+    <h2 data-i18n="chooser.compare">Сравнение вариантов</h2>
     <div class="fallback-btns">
-      <a href="/v1/">1 вариант</a>
-      <a href="/v2/">2 вариант</a>
-      <a href="/v3/">3 вариант</a>
+      <a href="/v1/" data-i18n="chooser.v1">1 вариант</a>
+      <a href="/v2/" data-i18n="chooser.v2">2 вариант</a>
+      <a href="/v3/" data-i18n="chooser.v3">3 вариант</a>
     </div>
   </main>
 
+  <script src="shared/i18n.js"></script>
   <script src="chooser.js"></script>
 </body>
 </html>

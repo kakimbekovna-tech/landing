@@ -11,69 +11,72 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="../shared/scrollbar.css" />
   <link rel="stylesheet" href="../shared/contact-modal.css" />
+  <link rel="stylesheet" href="../shared/lang.css" />
   <link rel="stylesheet" href="../shared/switcher.css" />
 </head>
 <body data-variant="1">
   <header class="site-header">
-    <a class="logo" href="#top" aria-label="NeonShine — наверх">
+    <a class="logo" href="#top" aria-label="NeonShine">
       <span class="logo-mark" aria-hidden="true"></span>
       NeonShine
     </a>
-    <a class="header-cta" data-wa="inspect" href="#">Записаться →</a>
+    <div class="header-tools" data-lang-mount>
+      <a class="header-cta" data-wa="inspect" data-i18n="nav.book" href="#">Записаться →</a>
+    </div>
   </header>
 
   <main id="top">
-    <section class="hero" aria-label="Главный экран">
-      <div class="hero-bg" role="img" aria-label="Спортивный автомобиль в неоновом свете"></div>
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg" role="img" data-i18n="hero.img" data-i18n-attr="aria-label" aria-label="Спортивный автомобиль в неоновом свете"></div>
       <div class="hero-veil"></div>
       <div class="hero-content">
-        <p class="brand-lockup">NeonShine · Астана</p>
-        <h1>Премиальный детейлинг и уход за вашим авто</h1>
-        <p class="hero-lead">Вернем вашей машине состояние новой за 24 часа</p>
-        <a class="btn btn-primary" data-wa="inspect" href="#">Записаться на осмотр</a>
+        <p class="brand-lockup" data-i18n="hero.lockup">NeonShine · Астана</p>
+        <h1 data-i18n="hero.title">Премиальный детейлинг и уход за вашим авто</h1>
+        <p class="hero-lead" data-i18n="hero.lead">Вернем вашей машине состояние новой за 24 часа</p>
+        <a class="btn btn-primary" data-wa="inspect" data-i18n="hero.cta" href="#">Записаться на осмотр</a>
       </div>
     </section>
 
     <section class="section services" id="services" aria-labelledby="services-title">
       <div class="section-inner">
         <header class="section-head">
-          <p class="eyebrow">Каталог</p>
-          <h2 id="services-title">Наши услуги</h2>
-          <p class="section-sub">Выберите услугу — сразу откроется WhatsApp с готовым сообщением.</p>
+          <p class="eyebrow" data-i18n="services.eyebrow">Каталог</p>
+          <h2 id="services-title" data-i18n="services.title">Наши услуги</h2>
+          <p class="section-sub" data-i18n="services.sub">Выберите услугу — сразу откроется WhatsApp с готовым сообщением.</p>
         </header>
 
         <ul class="service-grid">
           <li class="service-card">
             <div class="service-card-body">
-              <h3>Трехфазная мойка</h3>
-              <p>Бережная очистка кузова</p>
-              <p class="price">от 2 000 ₸</p>
+              <h3 data-i18n="svc.wash.name">Трехфазная мойка</h3>
+              <p data-i18n="svc.wash.desc">Бережная очистка кузова</p>
+              <p class="price" data-i18n="svc.wash.price">от 2 000 ₸</p>
             </div>
-            <a class="btn btn-ghost" data-wa="service" data-service="Трехфазная мойка" data-price="от 2 000 ₸" href="#">Выбрать</a>
+            <a class="btn btn-ghost" data-wa="service" data-service-key="wash" data-i18n="services.choose" href="#">Выбрать</a>
           </li>
           <li class="service-card">
             <div class="service-card-body">
-              <h3>Химчистка салона</h3>
-              <p>Удаление любых пятен и запахов</p>
-              <p class="price">от 35 000 ₸</p>
+              <h3 data-i18n="svc.interior.name">Химчистка салона</h3>
+              <p data-i18n="svc.interior.desc">Удаление любых пятен и запахов</p>
+              <p class="price" data-i18n="svc.interior.price">от 35 000 ₸</p>
             </div>
-            <a class="btn btn-ghost" data-wa="service" data-service="Химчистка салона" data-price="от 35 000 ₸" href="#">Выбрать</a>
+            <a class="btn btn-ghost" data-wa="service" data-service-key="interior" data-i18n="services.choose" href="#">Выбрать</a>
           </li>
           <li class="service-card">
             <div class="service-card-body">
-              <h3>Полировка кузова</h3>
-              <p>Устранение царапин и голограмм</p>
-              <p class="price">от 60 000 ₸</p>
+              <h3 data-i18n="svc.polish.name">Полировка кузова</h3>
+              <p data-i18n="svc.polish.desc">Устранение царапин и голограмм</p>
+              <p class="price" data-i18n="svc.polish.price">от 60 000 ₸</p>
             </div>
-            <a class="btn btn-ghost" data-wa="service" data-service="Полировка кузова" data-price="от 60 000 ₸" href="#">Выбрать</a>
+            <a class="btn btn-ghost" data-wa="service" data-service-key="polish" data-i18n="services.choose" href="#">Выбрать</a>
           </li>
           <li class="service-card">
             <div class="service-card-body">
-              <h3>Керамическое покрытие</h3>
-              <p>Защита кузова на 2 года</p>
-              <p class="price">от 120 000 ₸</p>
+              <h3 data-i18n="svc.ceramic.name">Керамическое покрытие</h3>
+              <p data-i18n="svc.ceramic.desc">Защита кузова на 2 года</p>
+              <p class="price" data-i18n="svc.ceramic.price">от 120 000 ₸</p>
             </div>
-            <a class="btn btn-ghost" data-wa="service" data-service="Керамическое покрытие" data-price="от 120 000 ₸" href="#">Выбрать</a>
+            <a class="btn btn-ghost" data-wa="service" data-service-key="ceramic" data-i18n="services.choose" href="#">Выбрать</a>
           </li>
         </ul>
       </div>
@@ -82,21 +85,21 @@
     <section class="section why" id="why" aria-labelledby="why-title">
       <div class="section-inner">
         <header class="section-head">
-          <p class="eyebrow">Доверие</p>
-          <h2 id="why-title">Почему мы</h2>
+          <p class="eyebrow" data-i18n="why.eyebrow">Доверие</p>
+          <h2 id="why-title" data-i18n="why.title">Почему мы</h2>
         </header>
         <ul class="why-list">
           <li>
             <span class="why-index" aria-hidden="true">01</span>
-            <p>Используем только немецкую и американскую автохимию.</p>
+            <p data-i18n="why.1">Используем только немецкую и американскую автохимию.</p>
           </li>
           <li>
             <span class="why-index" aria-hidden="true">02</span>
-            <p>Опыт мастеров от 5 лет.</p>
+            <p data-i18n="why.2">Опыт мастеров от 5 лет.</p>
           </li>
           <li>
             <span class="why-index" aria-hidden="true">03</span>
-            <p>Камеры в рабочей зоне — можете следить за своим авто онлайн.</p>
+            <p data-i18n="why.3">Камеры в рабочей зоне — можете следить за своим авто онлайн.</p>
           </li>
         </ul>
       </div>
@@ -110,19 +113,19 @@
           <span class="logo-mark" aria-hidden="true"></span>
           NeonShine
         </p>
-        <p class="footer-tag">Премиальный уход за автомобилями</p>
+        <p class="footer-tag" data-i18n="footer.tag">Премиальный уход за автомобилями</p>
       </div>
       <ul class="footer-meta">
         <li>
-          <span class="meta-label">Адрес</span>
-          <span>г. Астана</span>
+          <span class="meta-label" data-i18n="footer.address">Адрес</span>
+          <span data-i18n="footer.city">г. Астана</span>
         </li>
         <li>
-          <span class="meta-label">Режим работы</span>
-          <span>Ежедневно с 10:00 до 22:00</span>
+          <span class="meta-label" data-i18n="footer.hoursLabel">Режим работы</span>
+          <span data-i18n="footer.hours">Ежедневно с 10:00 до 22:00</span>
         </li>
         <li>
-          <span class="meta-label">Телефон</span>
+          <span class="meta-label" data-i18n="footer.phone">Телефон</span>
           <a class="phone-link" data-phone-link href="tel:+77001234567">+7 (700) 123-45-67</a>
         </li>
       </ul>
@@ -135,13 +138,14 @@
           </svg>
           Instagram
         </a>
-        <a class="btn btn-primary btn-compact" data-wa="inspect" href="#">Записаться на осмотр</a>
+        <a class="btn btn-primary btn-compact" data-wa="inspect" data-i18n="hero.cta" href="#">Записаться на осмотр</a>
       </div>
     </div>
-    <p class="copyright">© <span data-year></span> NeonShine. Все права защищены.</p>
+    <p class="copyright">© <span data-year></span> NeonShine. <span data-i18n="footer.rights">Все права защищены.</span></p>
   </footer>
 
   <script src="../shared/config.js"></script>
+  <script src="../shared/i18n.js"></script>
   <script src="../shared/main.js"></script>
   <script src="../shared/switcher.js"></script>
 </body>
